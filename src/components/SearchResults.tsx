@@ -3,17 +3,17 @@ import React from 'react';
 import TextNormal from './sharedUi/texts/TextNormal';
 import {Meal} from '../api/mealDB';
 
-type MealCardProps = {
+type SearchResultsProps = {
   meal: Meal;
 };
 
-const MealCard = ({meal}: MealCardProps) => {
+const SearchResults = ({meal}: SearchResultsProps) => {
   return (
     <View>
-      <TextNormal>MealCard</TextNormal>
-      <TextNormal>{JSON.stringify(meal.strMeal)}</TextNormal>
+      <TextNormal>"SearchResults:"</TextNormal>
+      <TextNormal>{meal?.strMeal}</TextNormal>
     </View>
   );
 };
 
-export default MealCard;
+export default SearchResults;
